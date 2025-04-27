@@ -23,11 +23,11 @@ CUDA_VISIBLE_DEVICES=0 accelerate launch --config_file $CONFIG train.py \
     --learning_rate=1e-4 \
     --train_batch_size=1 \
     --validation_prompt "K-pop manhwa style digital illustration of this image" \
-    --num_train_epochs=1000 \
-    --validation_steps=100 \
-    --checkpointing_steps=100 \
+    --num_train_epochs=300 \
+    --validation_steps=300 \
+    --checkpointing_steps=300 \
     --spatial_test_images "$KAGGLE_PREFIX/data/test/test_one.png" \
     --subject_test_images None \
     --test_h 512 \
     --test_w 512 \
-    --num_validation_images=2
+    --num_validation_images=1
